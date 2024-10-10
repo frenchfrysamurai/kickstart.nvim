@@ -86,6 +86,12 @@ P.S. You can delete this when you're done too. It's your config now! :)
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
+-- Following is for rgbasm syntax
+
+vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
+  pattern = { '*.gbasm' },
+  command = 'set filetype=gbasm',
+})
 
 vim.o.tabstop = 4 -- a TAB character looks like 4 spaces
 vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
